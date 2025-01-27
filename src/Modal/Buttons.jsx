@@ -7,7 +7,7 @@ function Buttons() {
   const [qoshish, setQoshish] = useState({ name: "", comment: "" });
 
   function qoshish1() {
-    setQoshish({name:name, comment:comment})
+    setQoshish({ name: name, comment: comment });
     setModal(!modal);
   }
   return (
@@ -21,16 +21,20 @@ function Buttons() {
         + Qo'shish
       </button>
 
-      <div className="flex flex-col  p-3">
-        <div className="flex gap-3">
-          <h2 className="font-bold">Ism: </h2>
-          <p>{qoshish.name}</p>
-        </div>
-        <div className="flex gap-3">
-          <h2 className="font-bold">Comment: </h2>
-          <p>{qoshish.comment}</p>
-        </div>
-      </div>
+      <table className="w-96 m-auto mt-20">
+        <thead className="border">
+          <tr>
+            <th className="border w-40 ">Ism</th>
+            <th className="border w-40 ">Comment</th>
+          </tr>
+        </thead>
+        <tbody className="border">
+          <tr>
+            <td className="border w-40  ">{qoshish.name}</td>
+            <td className="border w-40  ">{qoshish.comment}</td>
+          </tr>
+        </tbody>
+      </table>
 
       {modal && (
         <div className="fixed left-0 right-0 top-0 bottom-0  m-auto bg-black/90">
@@ -39,10 +43,10 @@ function Buttons() {
             <div className="my-5">
               <label className="text-xl mb-1">Ismingiz</label>
               <input
-              value={name}
-              onChange={(e)=>{
-                setName(e.currentTarget.value)
-              }}
+                value={name}
+                onChange={(e) => {
+                  setName(e.currentTarget.value);
+                }}
                 className="w-full p-2 mt-2 rounded-lg border  border-gray-400"
                 type="text"
                 placeholder="Yozin..."
@@ -51,10 +55,10 @@ function Buttons() {
             <div>
               <label>Comment</label>
               <textarea
-              value={comment}
-              onChange={(e)=>{
-                setComment(e.currentTarget.value)
-              }}
+                value={comment}
+                onChange={(e) => {
+                  setComment(e.currentTarget.value);
+                }}
                 className="w-full p-3 rounded-lg border border-gray-400"
                 placeholder="Comment Yozin..."
               ></textarea>
@@ -70,9 +74,7 @@ function Buttons() {
                 Bekor Qilish
               </button>
               <button
-              
                 onClick={qoshish1}
-                
                 className="bg-green-700 p-2 rounded-lg"
               >
                 Qo'shish
