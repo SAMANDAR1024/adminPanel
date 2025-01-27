@@ -37,7 +37,7 @@ function Buttons() {
           <div className="w-[500px] mt-[15%] p-6 rounded-lg   m-auto bg-white ">
             <h2 className="text-3xl font-bold">Ma'lumot Kirg'izing...</h2>
             <div className="my-5">
-              <label className="text-xl mb-1">MALUMOT YOZIN</label>
+              <label className="text-xl mb-1">Ismingiz</label>
               <input
               value={name}
               onChange={(e)=>{
